@@ -18,7 +18,17 @@
             String enrollmentnumber = request.getParameter("enrollmentnumber");
 
             <!-- Writing dummy data to return when user submit the enrollment number, later we will fetch this data from database -->
-            
+            String name = "Shiv Srivastava";
+            String address = "Kidwai Nagar, Kanpur.";
+
+            <!-- Displaying student info -->
+            if(enrollmentnumber != null && !enrollmentnumber.isempty()){
+                %>
+                <h2>Student Details</h2>
+                <p><strong>Name : </strong><%= name %></p>
+                <p><strong>Address : </strong><%= address %></p>
+                <%
+            }
         %>
     </body>
 </html>
